@@ -8,6 +8,7 @@ $name_of_court = $_REQUEST['name_of_court'];
 $name_of_judges = $_REQUEST['name_of_judges'];
 
 $number_of_judges =$_REQUEST['number_of_judges'];
+$judgement_date =$_REQUEST['judgement_date'];
 $nature_of_case =$_REQUEST['nature_of_case'];
 
 
@@ -26,6 +27,7 @@ citations='$citations',
 name_of_court= '$name_of_court',
 name_of_judges='$name_of_judges',
 number_of_judges='$number_of_judges',
+judgement_date ='$judgement_date',
 nature_of_case= '$nature_of_case',
 appellant_name='$appellant_name',
 respondent_name='$respondent_name',
@@ -37,7 +39,7 @@ description= '$description'
  WHERE id=$id";
 
 if ($connection->query($sql) === TRUE) {
-  header('Location: judgements.php');
+  header("Location: view.php?id=$id");
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . $connection->error;

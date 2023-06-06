@@ -290,6 +290,8 @@ tfoot input{
           <th>Citations</th>
           <th>Name of Court</th>
           <th>Name of Judges</th>
+          <th>Judgement Date</th>
+         
           <th>Nature of Case</th>
           <th>Appellant Name</th>
           <th>Respondent Name</th>
@@ -297,7 +299,7 @@ tfoot input{
           <th>Category</th>
           <th>Uploads</th>
           <th>Edit</th>
-          <th>Add</th>
+          <!-- <th>Add</th> -->
           
           
         </tr>
@@ -317,6 +319,9 @@ if ($result->num_rows > 0) {
         <td><?php echo $row["citations"]; ?></td>
         <td><?php echo $row["name_of_court"]; ?></td>
         <td><?php echo $row["name_of_judges"]; ?></td>
+
+        <td><?php echo $row["judgement_date"]; ?></td>
+
         <td><?php echo $row["nature_of_case"]; ?></td>
         <td><?php echo $row["appellant_name"]; ?></td>
         <td><?php echo $row["respondent_name"]; ?></td>
@@ -332,7 +337,7 @@ if ($result->num_rows > 0) {
         <td><a target="_blank" href="images/<?php echo $row["upload"]; ?>"><?php echo $row["upload"]; ?></a></td>
        
         <td><a href="edit.php?edit=<?php echo $row['id']; ?>">Edit</a></td>
-        <td><a href="Add.php?Add=<?php echo $row['id']; ?>">Add</a></td>
+        <!-- <td><a href="addjudgement.php?Add=<?php echo $row['id']; ?>">Add</a></td> -->
 
     </tr>
 
@@ -354,6 +359,8 @@ $connection->close();
           <th>Citations</th>
           <th>Name of Court</th>
           <th>Name of Judges</th>
+          <th>Judgement Date</th>
+          
           <th>Nature of Case</th>
           <th>Appellant Name</th>
           <th>Respondent Name</th>
@@ -362,7 +369,7 @@ $connection->close();
           <th>upload</th>
          
           <th>Edit</th>
-          <th>Add</th>
+          <!-- <th>Add</th> -->
           
           
         </tr>

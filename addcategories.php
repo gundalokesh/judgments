@@ -52,8 +52,8 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="addjudgement.php">Add Judgment</a></li>
-            <li><a class="dropdown-item" href="judgements.php">List of Judgement</a></li>
-            
+            <!-- <li><a class="dropdown-item" href="judgements.php">List of Judgement</a></li> -->
+            <li><a class="dropdown-item" href="searchjudgments.php">Search judgements</a></li>
           </ul>
         </li>
 

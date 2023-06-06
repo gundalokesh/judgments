@@ -27,11 +27,14 @@ $sql= "SELECT * FROM judgements WHERE id= $id";
 // update data query
 function update_data($connection, $id){
 
-    $judgement_number= legal_input($_POST['judgement_number']);
+    // $judgement_number= legal_input($_POST['judgement_number']);
     $citations= legal_input($_POST['citations']);
     $name_of_court = legal_input($_POST['name_of_court']);
     $name_of_judges = legal_input($_POST['name_of_judges']);
     $number_of_judges  = legal_input($_POST['number_of_judges']);
+    $judgement_date  = legal_input($_POST['judgement_date']);
+
+    
     $nature_of_case = legal_input($_POST['nature_of_case']);
     $appellant_name = legal_input($_POST['appellant_name']);
     $respondent_name  = legal_input($_POST['respondent_name']);
@@ -45,11 +48,15 @@ function update_data($connection, $id){
 
 
      $sql="UPDATE judgements 
-            SET judgement_number='$judgement_number',
-            citations='$citations',
+            -- SET judgement_number='$judgement_number',
+
+           SET citations='$citations',
             name_of_court= '$name_of_court',
             name_of_judges='$name_of_judges',
             number_of_judges='$number_of_judges',
+
+
+            judgement_date='$judgement_date'
             nature_of_case= '$nature_of_case',
             appellant_name='$appellant_name',
             respondent_name='$respondent_name',
